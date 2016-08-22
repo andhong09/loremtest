@@ -1,0 +1,508 @@
+<!DOCTYPE html><html lang="en"><head>
+		<title>Lorem: An Interview with Jen Dewalt.</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="Jen Dewalt, the founder of Zube and the creator of 180 websites in 180 days, is on a mission to make development teams happier.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="../images/fav.ico">
+		<style type="text/css">
+			html, body {
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				overflow-x: hidden;
+			}
+			body {
+				color: black;
+				text-align: center;
+				background: #F8F8F8;
+			}
+			* {
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			a:focus {
+				outline: none;
+			}
+			input, textarea {
+				outline: none;
+				background: transparent;
+				resize: none;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+				color: white;
+				border: 0;
+			}
+			.mobile-only {
+				display: block !important;
+			}
+			.desktop-only {
+				display: none !important;
+			}
+			h1, h2, h3, h4, h5, h6, header, section, footer, p, figure, figcaption {
+				display: block;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			header.page {
+				height: 60px;
+				background: white;
+				color: black;
+				z-index: 3;
+			}
+			header.page.shadow {
+				box-shadow: 0 2px 2px 0px rgba(233,233,233,0.5);
+			}
+			header.page a.header-logo {
+				display: inline-block;
+				margin-left: 0px;
+				height: 40px;
+				width: 80px;
+				position: relative;
+				overflow: hidden;
+				z-index: 2;
+				margin-top: 10px;
+			}
+			header.page a.header-logo img {
+				width: 100%;
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+			}
+			div.nav {
+				position: absolute;
+				top: 15px;
+				right: 30px;
+				display: block;
+				overflow: hidden;
+			}
+			div.nav a {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				padding: 10px 20px;
+				color: black;
+				letter-spacing: 1.6px;
+				float: right;
+			}
+			div.nav a:hover {
+				color: #1984B3;
+			}
+			.post-hero {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				display: block;
+				overflow: hidden;
+			}
+			.post-hero img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-container {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 0 15px;
+				max-width: 730px;
+				margin: auto;
+			}			
+
+			.post {
+				margin-top: 20vw;
+				padding: 0px 15px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				text-align: left;
+				margin-bottom: 130px;
+				background: white;
+				border-radius: 5px;
+				box-shadow: 0 2px 4px 0 rgba(231, 231, 231, .5);
+			}
+			.post-header {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 30px 0;
+			}
+			.post-header-who {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				height: 65px;
+			}
+			.post-header-who-pic {
+				position: absolute;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 65px;
+				top: 0px;
+				left: 0px;
+			}
+			.post-header-who-pic img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 65px;
+				border-radius: 35px;
+			}
+			.post-header-who-details {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 100%;
+				padding-left: 85px;
+				font-size: 16px;
+				color: black;
+				font-weight: 300;
+				line-height: 25px;
+			}
+			.post-header-who-name {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-top: 10px;
+			}
+			.post-header-who-job {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.post-header-when {
+				position: absolute;
+				top: 30px;
+				right: 0;
+				display: block;
+				overflow: hidden;
+				line-height: 18px;
+				font-weight: 300;
+				font-size: 14px;
+				color: #CDCDCD;
+			}
+			.post-body {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				color: black;
+			}
+			.post-section {
+				margin-bottom: 50px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-title {
+				font-size: 24px;
+				line-height: 34px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 700;
+			}
+			.post-section:first-child .post-section-title {
+				font-size: 24px;
+				line-height: 34px;
+			}
+			.post-section-paragraph {
+				font-size: 18px;
+				line-height: 26px;
+				margin-top: 20px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+			}
+			.post-section-paragraph a {
+				color: #1984B3;
+			}
+			.post-section-figure {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-top: 30px;
+				text-align: center;
+			}
+			.post-section-figure-image {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-figure-image img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-figure-caption {
+				line-height: 26px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+				font-size: 15px;
+				color: #111111;
+				font-style: italic;
+			}
+			@media (min-width: 640px) {
+				.mobile-only {
+					display: none !important;
+				}
+				.desktop-only {
+					display: block !important;
+				}
+				header.page {
+					height: 70px;
+				}
+				header.page a.header-logo {
+					display: block;
+					margin-left: 20px;
+					height: 50px;
+					width: 100px;
+				}
+				.post {
+					margin-top: 15vw;
+					padding: 10px 50px;
+				}
+				.post-section-title {
+					font-size: 28px;
+					line-height: 38px;
+				}
+				.post-section:first-child .post-section-title {
+					font-size: 34px;
+					line-height: 44px;
+				}
+				.post-section-paragraph {
+					font-size: 20px;
+					line-height: 30px;
+					margin-top: 30px;
+				}
+				.post-section-figure-caption {
+					line-height: 30px;
+				}
+			}
+		</style>
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,700" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css"></noscript>
+		<link rel="preload" href="../css/blog.css" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="../css/blog.css" rel="stylesheet" type="text/css"></noscript>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement('header'); 
+				document.createElement('nav'); 
+				document.createElement('article');
+				document.createElement('section'); 
+				document.createElement('aside'); 
+				document.createElement('footer');
+			</script>
+		<![endif]-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-72388809-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<meta property="og:url" content="https://lorem.tech/blog/interview-jen-dewalt.html">
+		<meta property="og:title" content="Lorem: An Interview with Jen Dewalt.">
+		<meta property="og:description" content="Jen Dewalt, the founder of Zube and the creator of 180 websites in 180 days, is on a mission to make development teams happier.">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://lorem.tech/images/blog/interview-jen-dewalt/share_hero_big.png">
+		<meta property="og:site_name" content="Lorem Technologies">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@lorem_tech">
+		<meta name="twitter:title" content="Lorem: An Interview with Jen Dewalt.">
+		<meta name="twitter:description" content="Jen Dewalt, the founder of Zube and the creator of 180 websites in 180 days, is on a mission to make development teams happier.">
+		<meta name="twitter:image" content="https://lorem.tech/images/blog/interview-jen-dewalt/share_hero.png">
+		<meta name="twitter:creator" content="@lorem_tech">
+		<meta name="twitter:domain" content="lorem.tech">
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/lorem.tech","sameAs":["https:\/\/www.facebook.com\/loremtech","https:\/\/www.linkedin.com\/company\/lorem-technologies-inc","https:\/\/twitter.com\/lorem_tech"],"name":"Lorem Technologies","logo":"https:\/\/lorem.tech\/images\/logo.png","description":"Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016."}</script>
+		<script type="text/javascript">!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);</script>
+		<script type="text/javascript">!function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(e){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),n=0;n<e.length;n++){var r=e[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(t.loadCSS(r.href,r),r.rel=null)}},!e.support()){e.poly();var n=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){t.clearInterval(n)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(n)})}}}(this);</script>
+	</head>
+	<body>
+		<header class="page">
+			<a href="../index.html" class="header-logo">
+				<img alt="Lorem Logo" src="../images/lorem_logo_dark.png">
+			</a>
+			<div class="nav desktop-only">
+				<a href="http://editor.lorem.tech">Beta Login</a>
+				<a href="../index.html#signup">Sign Up</a>
+				<a href="index.html">Blog</a>
+			</div>
+		</header>
+		<section id="post">
+			<div class="post-hero">
+				<img src="../images/blog/interview-jen-dewalt/hero.png" alt="Zube">
+			</div>
+			<div class="post-container">
+				<article class="post">
+					<header class="post-header">
+						<div class="post-header-who">
+							<div class="post-header-who-pic">
+								<img src="../images/blog/charlie_fogarty.png" alt="Charlie Fogarty">
+							</div>
+							<div class="post-header-who-details">
+								<div class="post-header-who-name">Charlie Fogarty</div>
+								<div class="post-header-who-job">Co-Founder, COO</div>
+							</div>
+						</div>
+						<div class="post-header-when desktop-only">August 22, 2016</div>
+					</header>
+					<main class="post-body">
+						<section class="post-section">
+							<h1 class="post-section-title">Jen Dewalt: Artist to Developer to Entrepreneur</h1>
+							<p class="post-section-paragraph">
+								We had a great time talking to <a href="https://twitter.com/JenniferDewalt" target="_blank">Jen Dewalt</a>, the founder of <a href="https://zube.io" target="_blank">Zube</a> and the creator of <a href="https://jenniferdewalt.com" target="_blank">180 websites in 180 days</a>. Jen and her co-founder, <a href="https://twitter.com/204NoContent" target="_blank">Aaron</a>, are on a mission to make development teams happier.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">What's it like to be a YCombinator Fellow?</h1>
+							<p class="post-section-paragraph">
+								It was a really interesting experience. We're part of the second fellowship batch where they invested $20k (convertible note) that becomes 1.5% only when the company is valued above $100M. It was a group of 30 companies at various stages, some with an idea, some just starting down the product path. With everyone remote it was a learning curve on both sides to figure out how to approach the new program.
+								<br><br>
+								It was amazing to have a group of people who are in similar stages of their company growth, both as a support system and to help hash things out -- having that community is really powerful when you're early on. Both my co-founder and I come from YC companies so we feel a strong tie to the community, and value the culture and support that YC offers.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Zube's goal is to make development teams happier. What do you think makes a great development team?</h1>
+							<p class="post-section-paragraph">
+								Big question. There are lots of things that make a dev team happy, but one of Zube's core values is that the developer has an incredibly important place in any 21st century company. This is naturally true at tech companies, but in all other companies IT used to be outside the core business. That's changing and developers are becoming increasingly important, not only in the business model of successful companies, but also as key decision makers. As such, companies that promote and empower developers have happier IT teams.
+								<br><br>
+								At the same time, the company needs to give the IT team enough freedom to actually do their job. At Zube we see the development team as an extremely valuable source of information. The rest of the company needs to be able to effectively communicate with the tech team without tons of meetings and emails that disrupt the actual work.
+								<br><br>
+								A well known post by Paul Graham describes <a href="http://www.paulgraham.com/makersschedule.html" target="_blank">the maker's schedule vs the manager's schedule</a>. Makers require larger blocks of time, so scheduling that time effectively makes a huge difference.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Business to Developer marketing can be unique. How are developers finding Zube?</h1>
+							<p class="post-section-paragraph">
+								We're an inbound product. We've experimented with some outreach in the past, but the vast majority of new users find us. We launched on <a href="https://news.ycombinator.com/item?id=10319380" target="_blank">HackerNews</a> and <a href="https://www.producthunt.com/tech/zube" target="_blank">ProductHunt</a>. HackerNews is amazing -- a great community for early adopters and feedback.
+								<br><br>
+								Most of our inbound comes from blog posts, news articles, and word of mouth. There is a lot of trust involved when you're building a tool to help team workflow. They need to feel confident that it won't cause a security issue and need to be able to tell other developers that it's solving X problem. Trust is huge.
+								<br><br>
+								We're also a hybrid of developer focused and beneficial for the entire team, so project managers and CTO's also find us first.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">As a workflow management tool, how do you use feedback from users and prevent feature creep?</h1>
+							<p class="post-section-paragraph">
+								We keep a super close tie to our users. Developers have a sense of what it takes to actually do what they are requesting, so their feedback is typically more thoughtful. They have great suggestions for UX and are able to provide really strong feedback.
+								<br><br>
+								Our main channels are email and Slack. Slack is super awesome. We added it last minute and it's been a great way to connect with our developer community.
+								<br><br>
+								We also use Zube to develop Zube. So we scope our roadmap and create sprints which keep us focused. Users are also really good at knowing what we're working on next, so feature requests are frequently on the roadmap. When feedback is cool but not on the roadmap, we stick it to a wall and visit the ideas between sprints.
+								<br><br>
+								When you get feedback, it's important to figure out what the user actually wants not what they are requesting. Figure out what is causing the request and why. Then, figure out how best to solve that need rather than building their requested feature.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">What was your product launch like? What would you do differently?</h1>
+							<p class="post-section-paragraph">
+								We had learned some lessons from our beta launch (October 2015), so our launch went really well. It's important to have a checklist because the morning of launch you'll be really stressed and there are a million things to do.
+								<br><br>
+								We planned out likely questions and our responses. It sounds obvious, but as you're moving up the front page of HackerNews, you don't waste any time drafting answers. So prepare.
+								<br><br>
+								A few things we will do for new feature launches: We'll have on-site and in-app chat to engage people. Our Slack channel has been so strong that we really think that in-app chat will be important for us as well. Don't overlook the opportunity to engage with potential users.
+								<br><br>
+								Leads from ProductHunt may not be super hot. People are just curious so we want to keep their interest as best as possible.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">You and your co-founder, Aaron, are a lean, mean team of two. How do you get everything done?</h1>
+							<p class="post-section-paragraph">
+								First, we have a really clear understanding of the problem that we're trying to solve and we're both developers so we can split the technical work. Second, we have pretty clear divides about who works on what. Aaron is data driven and great at API design. I'm stronger at product, UI, UX. So there are nice swimlanes with a healthy overlap.
+								<br><br>
+								We move fast and we're good at balancing "good enough to ship" and "do it right the first time". We have a few things we are not willing to compromise on.
+								<br><br>
+								Other than product, we divvy up our time and take shifts for customer support etc. The challenge is building the product while trying to build a relationship with customers.
+							</p>
+						</section>
+					</main>
+					<footer class="post-footer">
+						<h1>share this post</h1>
+						<div class="post-share">
+							<a class="post-share-option" href="https://twitter.com/intent/tweet?text=An interview with Jen Dewalt by @lorem_tech&url=https://lorem.tech/blog/interview-jen-dewalt.html" target="_blank">
+								<img src="../images/blog/share_twitter.png" alt="Share on Twitter">
+							</a>
+							<a class="post-share-option" href="https://www.linkedin.com/shareArticle?mini=true&title=An interview with Jen Dewalt&url=https://lorem.tech/blog/interview-jen-dewalt.html" target="_blank">
+								<img src="../images/blog/share_linkedin.png" alt="Share on LinkedIn">
+							</a>
+							<a class="post-share-option" href="https://www.facebook.com/sharer.php?u=https://lorem.tech/blog/interview-jen-dewalt.html" target="_blank">
+								<img src="../images/blog/share_facebook.png" alt="Share on Facebook">
+							</a>
+							<a class="post-share-option" href="mailto:?subject=An interview with Jen Dewalt&body=https://lorem.tech/blog/interview-jen-dewalt.html" target="_blank">
+								<img src="../images/blog/share_email.png" alt="Share via email">
+							</a>
+						</div>
+					</footer>
+				</article>
+			</div>
+		</section>
+		<footer class="page">
+			<a href="../index.html" class="footer-logo desktop-only">
+				<img alt="Lorem Logo Footer" src="../images/lorem_logo_footer.png">
+			</a>
+			<div class="footer-copyright">
+				© 2016 Lorem Technologies Inc.
+			</div>
+			<div class="footer-social desktop-only">
+				<a class="footer-social-link" href="https://twitter.com/Lorem_tech" target="_blank">
+					<img src="../images/twitter.png" alt="Twitter Logo">
+				</a>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			var dataLayer = dataLayer || [];
+			dataLayer.push({"getSetReff" : "v1.0", "setDomain" : ".lorem.tech"});
+		</script>
+		<script type="text/javascript">
+			function getSetReff(){function d(c){return(document.cookie.match("(^|; )"+c+"=([^;]*)")||0)[2]}function f(c,b,a){dd=new Date;dd.setTime(dd.getTime()+864E5*a);e="undefined"!=typeof a?";expires="+dd.toGMTString():"";document.cookie=c+"="+b+e+";domain="+g[0].setDomain+";path=/"}function l(c){return-1!=document.location.search.indexOf(c)?(""+document.location.search.split(c+"=")[1]).split("&")[0]:"not-set"}Array.prototype.filter||(Array.prototype.filter=function(c){if(void 0===this||null===this)throw new TypeError;
+			var a=Object(this),b=a.length>>>0;if("function"!==typeof c)throw new TypeError;for(var d=[],g=2<=arguments.length?arguments[1]:void 0,h=0;h<b;h++)if(h in a){var f=a[h];c.call(g,f,h,a)&&d.push(f)}return d});var g=[],g=dataLayer.filter(function(a){if(a.setDomain)return a});0===g.length&&(g[0]={setDomain:document.location.hostname});var b="undefined"!=typeof d("__sreff")?d("__sreff"):"",k="undefined"!=typeof d("__reff")?d("__reff"):"",a=t__apc=[];__tpc=res__apc=__gsr=__nwss="";__gsr=-1!=document.location.search.indexOf("utm_campaign")||
+			-1!=document.location.search.indexOf("utm_medium")||-1!=document.location.search.indexOf("utm_source")?"//campaign::c:["+l("utm_campaign")+"]m:["+l("utm_medium")+"]s:["+l("utm_source")+"]":document.referrer;__gsr=-1!=document.location.search.indexOf("gclid")?"//campaign::[adwords]":__gsr;__gsr="undefined"==typeof __gsr||""==__gsr||-1!=__gsr.indexOf(g[0].setDomain)?"(direct)":__gsr.split("/")[2];b?(a=b.split("."),a[1]=(new Date).getTime(),a[2]++,b=a.join(".")):(a[0]=a[1]=(new Date).getTime(),a[2]=
+			1,b=a.join("."),__nwss=1);f("__sreff",b);1==__nwss?(res__apc=""!=k?k+"|":"",f("__reff",res__apc+__gsr+"&"+b,730)):(t__apc=k.split("|"),__tpc=t__apc[t__apc.length-1],__tpc=""!=__tpc.split("&")[0]?__tpc.split("&")[0]:__gsr,res__apc=1==t__apc.length?"":t__apc.slice(0,-1).join("|")+"|","(direct)"==__gsr||-1!=__gsr.indexOf(__tpc.split("&")[0])?f("__reff",res__apc+__tpc+"&"+b,730):f("__reff",k+"|"+__gsr+"&"+b,730));return d("__reff")};
+		</script>
+		<script type="text/javascript">
+			getSetReff();
+		</script>
+		<script src="../js/blog.js"></script>
+</body></html>
