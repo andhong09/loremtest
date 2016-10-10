@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="en"><head>
+		<title>Lorem: An Interview with Quincy Larson.</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="Quincy Larson on Atomic Design and a future with more collaboration.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="../images/fav.ico">
+		<style type="text/css">
+			html, body {
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				overflow-x: hidden;
+			}
+			body {
+				color: black;
+				text-align: center;
+				background: #F8F8F8;
+			}
+			* {
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			a:focus {
+				outline: none;
+			}
+			input, textarea {
+				outline: none;
+				background: transparent;
+				resize: none;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+				color: white;
+				border: 0;
+			}
+			.mobile-only {
+				display: block !important;
+			}
+			.desktop-only {
+				display: none !important;
+			}
+			h1, h2, h3, h4, h5, h6, header, section, footer, p, figure, figcaption {
+				display: block;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			header.page {
+				height: 60px;
+				background: white;
+				color: black;
+				z-index: 3;
+			}
+			header.page.shadow {
+				box-shadow: 0 2px 2px 0px rgba(233,233,233,0.5);
+			}
+			header.page a.header-logo {
+				display: inline-block;
+				margin-left: 0px;
+				height: 40px;
+				width: 80px;
+				position: relative;
+				overflow: hidden;
+				z-index: 2;
+				margin-top: 10px;
+			}
+			header.page a.header-logo img {
+				width: 100%;
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+			}
+			div.nav {
+				position: absolute;
+				top: 15px;
+				right: 30px;
+				display: block;
+				overflow: hidden;
+			}
+			div.nav a {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				padding: 10px 20px;
+				color: black;
+				letter-spacing: 1.6px;
+				float: right;
+			}
+			div.nav a:hover {
+				color: #1984B3;
+			}
+			.post-hero {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				display: block;
+				overflow: hidden;
+			}
+			.post-hero img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-container {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 0 15px;
+				max-width: 730px;
+				margin: auto;
+			}			
+
+			.post {
+				margin-top: 20vw;
+				padding: 0px 15px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				text-align: left;
+				margin-bottom: 130px;
+				background: white;
+				border-radius: 5px;
+				box-shadow: 0 2px 4px 0 rgba(231, 231, 231, .5);
+			}
+			.post-header {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 30px 0;
+			}
+			.post-header-who {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				height: 65px;
+			}
+			.post-header-who-pic {
+				position: absolute;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 65px;
+				top: 0px;
+				left: 0px;
+			}
+			.post-header-who-pic img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 65px;
+				border-radius: 35px;
+			}
+			.post-header-who-details {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 100%;
+				padding-left: 85px;
+				font-size: 16px;
+				color: black;
+				font-weight: 300;
+				line-height: 25px;
+			}
+			.post-header-who-name {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-top: 10px;
+			}
+			.post-header-who-job {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.post-header-when {
+				position: absolute;
+				top: 30px;
+				right: 0;
+				display: block;
+				overflow: hidden;
+				line-height: 18px;
+				font-weight: 300;
+				font-size: 14px;
+				color: #CDCDCD;
+			}
+			.post-body {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				color: black;
+			}
+			.post-section {
+				margin-bottom: 50px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-title {
+				font-size: 24px;
+				line-height: 34px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 700;
+			}
+			.post-section:first-child .post-section-title {
+				font-size: 24px;
+				line-height: 34px;
+			}
+			.post-section-paragraph {
+				font-size: 18px;
+				line-height: 26px;
+				margin-top: 20px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+			}
+			.post-section-list {
+				font-size: 18px;
+				line-height: 24px;
+				margin: 0;
+				margin-top: 20px;
+				padding: 0;
+				padding-left: 25px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+			}
+			.post-section-list li {
+				padding-left: 5px;
+			}
+			.post-section-paragraph a {
+				color: #1984B3;
+			}
+			.post-section-figure {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-top: 30px;
+				text-align: center;
+			}
+			.post-section-figure-image {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-figure-image img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-figure-caption {
+				line-height: 26px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+				font-size: 15px;
+				color: #111111;
+				font-style: italic;
+			}
+			@media (min-width: 640px) {
+				.mobile-only {
+					display: none !important;
+				}
+				.desktop-only {
+					display: block !important;
+				}
+				header.page {
+					height: 70px;
+				}
+				header.page a.header-logo {
+					display: block;
+					margin-left: 20px;
+					height: 50px;
+					width: 100px;
+				}
+				.post {
+					margin-top: 15vw;
+					padding: 10px 50px;
+				}
+				.post-section-title {
+					font-size: 28px;
+					line-height: 38px;
+				}
+				.post-section:first-child .post-section-title {
+					font-size: 34px;
+					line-height: 44px;
+				}
+				.post-section-paragraph {
+					font-size: 20px;
+					line-height: 30px;
+					margin-top: 30px;
+				}
+				.post-section-list {
+					font-size: 20px;
+					line-height: 26px;
+					margin: 0;
+					margin-top: 30px;
+					padding: 0;
+					padding-left: 35px;
+				}
+				.post-section-figure-caption {
+					line-height: 30px;
+				}
+			}
+		</style>
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,700" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css"></noscript>
+		<link rel="preload" href="../css/blog.css" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="../css/blog.css" rel="stylesheet" type="text/css"></noscript>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement('header'); 
+				document.createElement('nav'); 
+				document.createElement('article');
+				document.createElement('section'); 
+				document.createElement('aside'); 
+				document.createElement('footer');
+			</script>
+		<![endif]-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-72388809-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<meta property="og:url" content="https://lorem.tech/blog/interview-quincy-larson.html">
+		<meta property="og:title" content="FreeCodeCamp: 200,000 Strong. An interview with Quincy Larson">
+		<meta property="og:description" content="The open source community now has over 200,000 people and has donated over $1,000,000 of development resources to charity. We were lucky enough to ask Quincy Larson eight questions. ">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://lorem.tech/images/blog/interview-quincy-larson/share_hero_big.png">
+		<meta property="og:site_name" content="Lorem Technologies">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@lorem_tech">
+		<meta name="twitter:title" content="FreeCodeCamp: 200,000 Strong. An interview with Quincy Larson">
+		<meta name="twitter:description" content="The open source community now has over 200,000 people and has donated over $1,000,000 of development resources to charity. We were lucky enough to ask Quincy Larson eight questions. ">
+		<meta name="twitter:image" content="https://lorem.tech/images/blog/interview-quincy-larson/share_hero.png">
+		<meta name="twitter:creator" content="@lorem_tech">
+		<meta name="twitter:domain" content="lorem.tech">
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/lorem.tech","sameAs":["https:\/\/www.facebook.com\/loremtech","https:\/\/www.linkedin.com\/company\/lorem-technologies-inc","https:\/\/twitter.com\/lorem_tech"],"name":"Lorem Technologies","logo":"https:\/\/lorem.tech\/images\/logo.png","description":"Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016."}</script>
+		<script type="text/javascript">!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);</script>
+		<script type="text/javascript">!function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(e){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),n=0;n<e.length;n++){var r=e[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(t.loadCSS(r.href,r),r.rel=null)}},!e.support()){e.poly();var n=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){t.clearInterval(n)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(n)})}}}(this);</script>
+	</head>
+	<body>
+		<header class="page">
+			<a href="../index.html" class="header-logo">
+				<img alt="Lorem Logo" src="../images/lorem_logo_dark.png">
+			</a>
+			<div class="nav desktop-only">
+				<a href="http://editor.lorem.tech">Beta Login</a>
+				<a href="../index.html#signup">Sign Up</a>
+				<a href="index.html">Blog</a>
+			</div>
+		</header>
+		<section id="post">
+			<div class="post-hero">
+				<img src="../images/blog/interview-quincy-larson/hero.png" alt="Atomic Design">
+			</div>
+			<div class="post-container">
+				<article class="post">
+					<header class="post-header">
+						<div class="post-header-who">
+							<div class="post-header-who-pic">
+								<img src="../images/blog/charlie_fogarty.png" alt="Charlie Fogarty">
+							</div>
+							<div class="post-header-who-details">
+								<div class="post-header-who-name">Charlie Fogarty</div>
+								<div class="post-header-who-job">Co-Founder, COO</div>
+							</div>
+						</div>
+						<div class="post-header-when desktop-only">October 10, 2016</div>
+					</header>
+					<main class="post-body">
+						<section class="post-section">
+							<h1 class="post-section-title">FreeCodeCamp: 200,000 Strong</h1>
+							<p class="post-section-paragraph">
+								In four days <a href ="https://www.freecodecamp.com/">FreeCodeCamp</a> turns two years old. It’s one of the best ways to learn how to code online, and it’s all free. In addition to the 2,000+ hours of online lessons / challenges, FreeCodeCamp connects new developers to nonprofits to work on real-world projects. Started by <a href ="https://medium.com/@quincylarson">Quincy Larson</a>, the open source community now has over 200,000 people and has donated over $1,000,000 of development resources to charity. We were lucky enough to ask Quincy eight questions. 
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">You started freeCodeCamp writing <a href="https://medium.freecodecamp.com/how-to-stand-on-shoulders-16e8cfbc127b#.4m2l7bddj">as little code as necessary</a> and went live after three days. What were the first two weeks like after launch?</h1>
+							<p class="post-section-paragraph">
+								The first two weeks were a lot of work. I kept tweeting about it, and wrote a blog post about it, so we had a slow trickle of people coming by to check it out. I spent every waking minute in our chat room, trying to learn more about the people who came by and hold their attention. I knew that if I could get people to stick around, we could start to build up a critical mass in our chat room. I also acted on as much feedback as I could, coding new features as people requested them. 
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Building a portfolio by building valuable apps for nonprofits sounds too good to be true. Can you tell me more about the program? What are some successful projects? If any have been unsuccessful, what was the issue? </h1>
+							<p class="post-section-paragraph">
+								The only time we've heard that it could be too good to be true is from the nonprofits we're coding pro bono for. The developers in our community understand the value proposition clearly. They gain experience by pair programming, using agile methodologies, and working from user stories based on real business problems. 
+								<br><br>
+								We had already had a couple dozen projects successful projects, and we’re just getting started. You can see demos of several of these on our youtube channel (youtube.com/freecodecamp).
+								<br><br>
+								Our least successful projects have been ones where we were just building a basic website. We’ve found that using 10-15 weeks of two full stack developers and a project manager's time was overkill, and underutilized their newly developed skillsets. Based on this, we now focus on building internal tools, like the inventory and logistics system we built for Chasdei Kaduri, a Toronto-based food bank. 
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Ed-tech is heating up (lots of VC investment + new companies). How do you see the space and the open/free option vs. paid? How do you want to see if evolve over the next five years? </h1>
+							<p class="post-section-paragraph">
+								I try not to get caught up in the meta. Most ed-tech investment is aimed at K-16 anyway, and Free Code Camp is focused 100% on adult learners. Also, we have never taken investment, and I’m hopeful that we’ll never have to.
+								<br><br>
+								Our platform isn’t that complicated. If you’re trying to solve hard problems, like algorithmic assignment grading or AI-based tutoring, you may have a much longer development process before you can ship your minimum viable product, so you may need funding.
+								<br><br>
+								If you’re trying to sell into institutions, you’ll have a long sales cycle, and you may also need funding.
+								<br><br>
+								If you want to achieve scale, your product should be free and you should figure out another way to cover your costs. For us, right now that’s merchandise. Down the road, it will be helping people get jobs. 
+								<br><br>
+								So far, 5,000+ campers have already gotten their first developer job, but we haven’t done anything to capture that value at this point. We’d rather focus on better serving campers at this point.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">You just wrote about how JavaScript tools are rapidly evolving. What’s freeCodeCamp’s feedback loop whereby new tools get added to the curriculum? </h1>
+							<p class="post-section-paragraph">
+								We de-emphasize learning tools in favor of learning core skills. This way, when the tools du jour change, campers are still in a good position, and can quickly adapt. 
+								<br><br>
+								The main tools we teach beyond HTML, CSS, JavaScript, and databases are tools with wide adoption that are unlikely to go away in the next 5 years. Tools like Git, Node.js, D3, and React.
+								<br><br>
+								Our curriculum decisions are based primarily off of hiring trends we see at large companies (like Google and Facebook) here in San Francisco, as well as startups. Our assumption is that these preferences will gradually propagate through organizations around the world. That’s how we were able to get out ahead of the pack when it came to teaching Node.js and React. 
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">You’re a prolific writer. What’s your approach? </h1>
+							<p class="post-section-paragraph">
+								I spend 20 to 30 hours each week editing articles that campers submit to our Medium publication and writing articles of my own. I worked as a journalist and newspaper editor throughout college and for a while afterward, so feel qualified to make editorial decisions and coach campers one what they should write about. 
+								<br><br>
+								We’re quite selective, and only publish a few articles a week. People’s time is scarce, so we err on the side of quality over quantity.
+								<br><br>
+								As for my own writing, I have a huge backlog of topics I want to write about. I passively mull these over for weeks and conduct research. Then, when I feel ready, I sit down and start writing - often for 8 to 10 hours uninterrupted, which is about how much time my average 1,500 word article takes to write.
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title"> You <a href ="https://medium.freecodecamp.com/i-hack-time-6d3a32193c9#.az7eouuvu">hack time</a> by listening to books / podcasts during exercise. Any favorite listens at the moment? </h1>
+							<p class="post-section-paragraph">
+								Yes - if you’re new to software development, I recommend the <a href="http://www.codenewbie.org/podcast">“Code Newbie”</a> podcast. There’s another new podcast called <a href="http://learntocodewith.me/podcast/">“Learn to Code with Me.”</a> Two other excellent podcasts that are a bit more advanced are <a href="https://changelog.com/podcast/">“The Changelog,”</a> which focuses on open source, and <a href="http://softwareengineeringdaily.com/">“Software Engineering Daily.”</a>
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">What new product / software is getting you excited these days?</h1>
+							<p class="post-section-paragraph">
+								I am very excited about <a href = "https://hyperdev.com">HyperDev.com</a>. It’s an in-browser Node.js environment where you can build full stack apps. It’s free, and even hosts your apps for free. (It’s only meant for development purposes). We’re using HyperDev for our new back end curriculum. We can run tests on Free Code Camp against campers’ HyperDev instances, and grade their projects automatically.</a>
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Is there anything on your mind that is not yet ready for a full medium post? Can we get a preview?</h1>
+							<p class="post-section-paragraph">
+								Learning to code is the new MBA. After working for a while, I went back to school for an MBA and learned a lot. It helped me land my first school director position. That was in the early 2000’s. Today, learning to code is the wisest thing you can do if you’re already a college graduate. It will unlock a wide array of job opportunities, and is basically a prerequisite if you want to be a technology entrepreneur. I’ll have a lot of data to support my point.
+								<br><br>
+								Also, we’re publishing a full analysis of our Medium publication’s first year, which will break down stats in detail, so everyone can see what type of articles seem to work best on Medium. Too much of what’s written about technology is either hyperbolic or misleading. We will continue to publish articles that are rigorous yet accessible, and we encourage other organizations to do the same.
+							</p>
+						</section>
+					</main>
+					<footer class="post-footer">
+						<h1>share this post</h1>
+						<div class="post-share">
+							<a class="post-share-option" href="https://twitter.com/intent/tweet?text=FreeCodeCamp: 200,000 Strong. An interview with Quincy Larson by @lorem_tech&amp;url=https://lorem.tech/blog/interview-quincy-larson.html" target="_blank">
+								<img src="../images/blog/share_twitter.png" alt="Share on Twitter">
+							</a>
+							<a class="post-share-option" href="https://www.linkedin.com/shareArticle?mini=true&amp;title=FreeCodeCamp: 200,000 Strong. An interview with Quincy Larson&amp;url=https://lorem.tech/blog/interview-quincy-larson.html" target="_blank">
+								<img src="../images/blog/share_linkedin.png" alt="Share on LinkedIn">
+							</a>
+							<a class="post-share-option" href="https://www.facebook.com/sharer.php?u=https://lorem.tech/blog/interview-quincy-larson.html" target="_blank">
+								<img src="../images/blog/share_facebook.png" alt="Share on Facebook">
+							</a>
+							<a class="post-share-option" href="mailto:?subject=FreeCodeCamp: 200,000 Strong. An interview with Quincy Larson&amp;body=https://lorem.tech/blog/interview-quincy-larson.html" target="_blank">
+								<img src="../images/blog/share_email.png" alt="Share via email">
+							</a>
+						</div>
+					</footer>
+				</article>
+			</div>
+		</section>
+		<footer class="page">
+			<a href="../index.html" class="footer-logo desktop-only">
+				<img alt="Lorem Logo Footer" src="../images/lorem_logo_footer.png">
+			</a>
+			<div class="footer-copyright">
+				© 2016 Lorem Technologies Inc.
+			</div>
+			<div class="footer-social desktop-only">
+				<a class="footer-social-link" href="https://twitter.com/Lorem_tech" target="_blank">
+					<img src="../images/twitter.png" alt="Twitter Logo">
+				</a>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			var dataLayer = dataLayer || [];
+			dataLayer.push({"getSetReff" : "v1.0", "setDomain" : ".lorem.tech"});
+		</script>
+		<script type="text/javascript">
+			function getSetReff(){function d(c){return(document.cookie.match("(^|; )"+c+"=([^;]*)")||0)[2]}function f(c,b,a){dd=new Date;dd.setTime(dd.getTime()+864E5*a);e="undefined"!=typeof a?";expires="+dd.toGMTString():"";document.cookie=c+"="+b+e+";domain="+g[0].setDomain+";path=/"}function l(c){return-1!=document.location.search.indexOf(c)?(""+document.location.search.split(c+"=")[1]).split("&")[0]:"not-set"}Array.prototype.filter||(Array.prototype.filter=function(c){if(void 0===this||null===this)throw new TypeError;
+			var a=Object(this),b=a.length>>>0;if("function"!==typeof c)throw new TypeError;for(var d=[],g=2<=arguments.length?arguments[1]:void 0,h=0;h<b;h++)if(h in a){var f=a[h];c.call(g,f,h,a)&&d.push(f)}return d});var g=[],g=dataLayer.filter(function(a){if(a.setDomain)return a});0===g.length&&(g[0]={setDomain:document.location.hostname});var b="undefined"!=typeof d("__sreff")?d("__sreff"):"",k="undefined"!=typeof d("__reff")?d("__reff"):"",a=t__apc=[];__tpc=res__apc=__gsr=__nwss="";__gsr=-1!=document.location.search.indexOf("utm_campaign")||
+			-1!=document.location.search.indexOf("utm_medium")||-1!=document.location.search.indexOf("utm_source")?"//campaign::c:["+l("utm_campaign")+"]m:["+l("utm_medium")+"]s:["+l("utm_source")+"]":document.referrer;__gsr=-1!=document.location.search.indexOf("gclid")?"//campaign::[adwords]":__gsr;__gsr="undefined"==typeof __gsr||""==__gsr||-1!=__gsr.indexOf(g[0].setDomain)?"(direct)":__gsr.split("/")[2];b?(a=b.split("."),a[1]=(new Date).getTime(),a[2]++,b=a.join(".")):(a[0]=a[1]=(new Date).getTime(),a[2]=
+			1,b=a.join("."),__nwss=1);f("__sreff",b);1==__nwss?(res__apc=""!=k?k+"|":"",f("__reff",res__apc+__gsr+"&"+b,730)):(t__apc=k.split("|"),__tpc=t__apc[t__apc.length-1],__tpc=""!=__tpc.split("&")[0]?__tpc.split("&")[0]:__gsr,res__apc=1==t__apc.length?"":t__apc.slice(0,-1).join("|")+"|","(direct)"==__gsr||-1!=__gsr.indexOf(__tpc.split("&")[0])?f("__reff",res__apc+__tpc+"&"+b,730):f("__reff",k+"|"+__gsr+"&"+b,730));return d("__reff")};
+		</script>
+		<script type="text/javascript">
+			getSetReff();
+		</script>
+		<script src="../js/blog.js"></script>
+</body></html>
