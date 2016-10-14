@@ -37,6 +37,16 @@ $(document).ready(function() {
 		return undefined;
 	};
 
+	var encodeEmail = function(email) {
+		if (!email) return '';
+		try {
+			var encoded = btoa(unescape(encodeURIComponent(email)));
+			return encoded;
+		} catch (e) {
+			return '';
+		}
+	}
+
 	function createCookie(name,value,days,domain) {
 		var expires = "";
 		var domainStr = "";
@@ -93,15 +103,21 @@ $(document).ready(function() {
 	if (reffStr) checkAndSetReffCookie(reffStr);
 
 	// set the values in the form (hidden too)
-	if (emailQueryParam) document.getElementById('email-input').value = emailQueryParam;
+	if (emailQueryParam) {
+		document.getElementById('email-input').value = emailQueryParam;
+		var encoded = encodeEmail(emailQueryParam);
+		if (encoded) ga('set', 'userId', encoded);
+	}
 	if (typeQueryParam) {
 		var selectedToggle = $('input:radio[name="USERTYPE"][value="'+typeQueryParam+'"]')[0];
 		selectedToggle.setAttribute('checked', true);
 		toggleChange.call(selectedToggle);
+		ga('set', 'dimension1', typeQueryParam);
 	}
 	$('#reff-input').val(reffStr);
 
 	var invalidSubmission = function () {
+		ga('send', { hitType: 'event', eventCategory: 'Signup', eventAction: 'Fail' });
 		$('#landing-submit').hide();
 		$('#landing-error').show();
 	}
@@ -112,8 +128,14 @@ $(document).ready(function() {
 	}
 
 	var successfulSubmission = function () {
-		createCookie('email',document.getElementById('email-input').value,100);
-		createCookie('type',$('input:radio[name="USERTYPE"]:checked').val(),100);
+		var emailVal = document.getElementById('email-input').value;
+		var typeVal = $('input:radio[name="USERTYPE"]:checked').val();
+		var encoded = encodeEmail(emailVal);
+		if (encoded) ga('set', 'userId', encoded);
+		if (typeVal) ga('set', 'dimension1', typeVal);
+		ga('send', { hitType: 'event', eventCategory: 'Signup', eventAction: 'Submit' });
+		createCookie('email',emailVal,100);
+		createCookie('type',typeVal,100);
 		
 		$('.landing-inputs').addClass('submitted');
 		$('#become-adopter').hide();
