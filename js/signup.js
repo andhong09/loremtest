@@ -133,7 +133,7 @@ $(document).ready(function() {
 		var encoded = encodeEmail(emailVal);
 		if (encoded) ga('set', 'userId', encoded);
 		if (typeVal) ga('set', 'dimension1', typeVal);
-		ga('send', { hitType: 'event', eventCategory: 'Signup', eventAction: 'Submit' });
+		ga('send', { hitType: 'event', eventCategory: 'Signup', eventAction: 'Submit', eventLabel: encoded });
 		createCookie('email',emailVal,100);
 		createCookie('type',typeVal,100);
 		
